@@ -39,3 +39,6 @@ Example request:<br>GET /monitor/overview HTTP/1.1<br>
                     Host: localhost:8083<br>
                     Cache-Control: no-cache <br>
 }
+
+
+// I have not implemented the database connectivity just to keep it simple
