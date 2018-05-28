@@ -25,6 +25,9 @@ public class MonitoringController {
         MonitorResponse response = new MonitorResponse();
 
         response.setStatus("started");
+        long interval =request.getInterval();
+        String server=request.getServer();
+        response.setDescription(String.format("Monitoring has been started on %s Server in intervals of %s seconds",server,interval));
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
@@ -34,6 +37,7 @@ public class MonitoringController {
         MonitorResponse response = new MonitorResponse();
 
         response.setStatus("stopped");
+        response.setDescription("server monitoring has been stopped");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
